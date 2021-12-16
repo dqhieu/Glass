@@ -11,13 +11,27 @@ struct CardView: View {
   
   @Environment(\.colorScheme) var colorScheme
   
+  var fillColor: Color {
+    if colorScheme == .light {
+      return .white
+    }
+    return .black
+  }
+  
+  var backgroundColor: Color {
+    if colorScheme == .light {
+      return .white
+    }
+    return .black
+  }
+  
   var body: some View {
     ZStack {
       RoundedRectangle(cornerRadius: 24)
-        .fill(.white)
+        .fill(fillColor)
         .opacity(0.1)
         .background(
-          Color.white
+          backgroundColor
             .opacity(0.08)
             .blur(radius: 10)
         )
