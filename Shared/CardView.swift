@@ -38,12 +38,16 @@ struct CardView: View {
         .shadow(color: .black.opacity(0.3), radius: 10)
         .padding(24)
         .aspectRatio(1.0, contentMode: .fit)
-      VStack {
-        Text(colorScheme == .light ? "☀️" : "🌙")
-        Text(colorScheme == .light ? "Good morning, Hieu" : "Good evening, Hieu")
+      VStack(alignment: .center, spacing: 10) {
+        Text("🎄")
+        Text("Merry Christmas")
+        Text("and")
+        Text("Happy New Year")
+        Text("🎊")
       }
       .font(.system(size: 32, weight: .regular, design: .rounded))
-      .foregroundColor(.white)
+      .foregroundColor(.primary)
     }
+    
   }
 }
